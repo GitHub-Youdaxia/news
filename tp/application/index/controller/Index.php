@@ -1,19 +1,36 @@
 <?php
 namespace app\index\controller;
 
-class Index
+use app\index\model\News;
+use app\index\model\newsClass;
+use think\Controller;
+
+class Index extends Controller
 {
     public function index()
     {
-        return 'index1';
+        // 不带任何参数 自动定位当前操作的模板文件
+        //  return 'dd';
+        // return $this->fetch();
+        $newsClassArr = newsClass::select();
+        // $this->assign('newsClassArr', $newsClassArr);
+        return $newsClassArr;
     }
-    public function index2($name = 'ddddd')
+    public function getNews($newsRid = '', $num = 10)
     {
-        return 'hello,' . $name;
+        $newsClassArr = News::where('rid', $newsRid)->limit($num)->select();
+
+        return $newsClassArr;
     }
 
-    public function hello($name = 'ThinkPHP5')
+    public function detail($id = '0')
     {
-        return 'hello,' . $name;
+        $article = News::where('id', $id)->find();
+        return $article;
+    }
+    public function all($rid = '0')
+    {
+        $list = News::where('rid', $rid)->select();
+        return $list;
     }
 }

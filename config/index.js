@@ -16,12 +16,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api': {
+      '/': {
         target: 'http://127.0.0.1:80/', // 数据的接口路径
         changeOrigin: true, // 跨域
         secure: false,
         pathRewrite: {
-          '^/api': ''
+          '^/': ''
         }
       }      
     },

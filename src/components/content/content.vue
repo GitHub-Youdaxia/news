@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    
     <el-row>
       <el-col :span="18" :offset=3>
         <el-row>
@@ -17,7 +18,7 @@
 import newsBlock from './newsBlock'
 
   export default {
-    name: 'pubHeader',
+    name: 'content',
     data() {
       return {
         msg: 'header',
@@ -31,6 +32,7 @@ import newsBlock from './newsBlock'
         // get body data
         // this.someData = response.body;
         this.newsClassArr = response.body
+
 
       }, response => {
         console.log("error");

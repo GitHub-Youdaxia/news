@@ -24,3 +24,10 @@ new Vue({
 //   components: { detail },
 //   template: '<detail/>'
 // })
+
+//全局注册组件
+// Vue.component("my-header",{
+//   template: "<h3 >my-header</h3>"
+
+// })
+

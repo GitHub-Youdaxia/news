@@ -1,5 +1,8 @@
 <template>
   <div class="main">
+<router-link :to="'/childRouter2'">Home-child-router2</router-link>
+<router-link :to="'/childRouter3'">Home-child-router3</router-link>
+
     <pHeader></pHeader>
     <newsClass></newsClass>
     <el-row>

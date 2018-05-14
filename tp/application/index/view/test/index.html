@@ -11,7 +11,7 @@
 <body>
 
   <h1>测试</h1>
-  <a href="http://localhost:8080/public/index/test">本页访问地址</a>
+  <a href="http://localhost:80/public/index/test">本页访问地址</a>
 
 
   <script src="/public/static/js/jquery-1.9.1.min.js"></script>
@@ -25,12 +25,18 @@
         //  async: false,
 
         success: function (msg) {
-          console.log(msg);
+             console.log(msg);
 
         }
       });
+      
+      setTimeout(() => {
+                  console.log("0.001s后");
 
+      }, 1);
+      for (let index = 0; index < 1000000000; index++) {
 
+      }
     })
 
   </script>

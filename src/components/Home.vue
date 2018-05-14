@@ -1,5 +1,14 @@
 <template>
   <div class="main">
+
+
+<router-link :to="'/childRouter2'">Home-child-router2</router-link>
+<router-link :to="'/childRouter3'">Home-child-router3</router-link>
+
+
+    <h3 style="text-align:center">
+      <router-view></router-view>
+    </h3>
     <commonHeader></commonHeader>
     <newsClass></newsClass>
     <newsContent></newsContent>
